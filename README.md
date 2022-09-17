@@ -1,0 +1,1 @@
+# Demo supermarket checkout script - python
