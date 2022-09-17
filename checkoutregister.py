@@ -1,37 +1,36 @@
 class CheckoutRegister():
+    """Extends the queries and functionalities of products by use of helper functions"""
     def __init__(self,checkout_date,checkout_items):
         self.checkout_date = checkout_date
         self.checkout_items = checkout_items
 
-    def add_item_to_cart(self,p):
-        self.checkout_items.append(p)
-        
-
-    def display_checkout_items(self):
-        print("Checkout Items")
-        print(self.checkout_items)
-
-
     def calculate_payment_due(self):
-        cart_items = self.checkout_items
+        """ Function : Aggregates the total payment that is required for the purchase
+            Returns  : Calculated sum plus the tax region factored in."""
+            
+        tax = str(input("\n Please enter tax area (V)irginia or (M)aryland ?: "))
         cart_totals = 0
-
         for index, product in enumerate(self.checkout_items):
-            cart_totals += product['price']
+            if tax == "v":
+                cart_totals += (product['price'])*1.06
+            elif tax == "m":
+                cart_totals += (product['price'])*1.046
+            else:
+                cart_totals += product['price']         
         self.due = cart_totals
         return cart_totals
 
     def pay_money(self,total):
         amount_to_pay = total
         print("\nPayment due: $"+str(amount_to_pay))
-        #self.accept_payment(amount_to_pay)        
-        #amount_to_pay = input("Please enter an amount to pay: ")
         change = self.accept_payment(amount_to_pay)
         return change
         
 
     def accept_payment(self, amount_to_pay):
-        #print("accept payment")
+        """Function : Evaluates and accepts a valid payment
+           Returns :  Validated payment and change if need be."""
+
         paid = float(0.0)
         customer_pay = float(0.0)
         due = float(0.0)
@@ -50,7 +49,7 @@ class CheckoutRegister():
                     if(paid < total):
                         due = total - paid
                         total = due
-                        print("Payment due: $"+str(due))
+                        print("Payment due: $"+str(due))      
                         due = True
                         continue   
                     else:
@@ -62,15 +61,21 @@ class CheckoutRegister():
         return change
                         
     def print_receipt(self,change):
-        print("\n--------- Final Receipt --------\n")
+        """Defines the structure and arrangement of console out receipt"""
+        
+        print("\n------------- Final Receipt -----------\n")
+        print("            "+self.checkout_date,"\n")
+        print("ITEM                     AMOUNT")
+        print("-----------------------------------------")
 
         for index, item in enumerate(self.checkout_items):
-            print(item['name'],'        $'+str(item['price']))
+            print(item['name'],'           $'+str(item['price']))
 
-        print("\n")
+        print("-----------------------------------------")
         print("Total amount due:",'     $'+str(self.due))
         print("Amount Received",'       $'+str(self.customer_pay))
         print("Change Given",'          $'+str(self.change),'\n')
+        
 
 
     
