@@ -37,6 +37,7 @@ def main():
         main()     
     else:
         #sys.exit(0)
+    
         exit()
 
 print("\n-------- Welcome to Amenhotep (III) Supermarket! 🤩--------\n")
