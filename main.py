@@ -1,10 +1,11 @@
 from time import gmtime, strftime
 from product import Product
-from checkoutregister import CheckoutRegister
+from checkout import Checkout
 
 
 current_date_time = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 wishlist = []
+
 
 def scan_product():
     barcode = input("\n Please enter the barcode of your item: ")
@@ -22,13 +23,13 @@ def scan_another():
     if(scan_another == 'y' or scan_another == 'Y'):
         scan_product()
 
-def main():
+def main():     
     scan_product()
-    c1 = CheckoutRegister(current_date_time,wishlist)
+    c1 = Checkout(current_date_time,wishlist)
     total_payment = c1.calculate_payment_due()
     change = c1.pay_money(total_payment)
     c1.print_receipt(change)
-    print("\nThank you for shopping at Amenhotep (III)!\n")
+    print("\nThank you for shopping at Zn Inc (III)!\n")
 
     next = input("(N)ext customer, or (Q)uit? ")
     if(next == "n" or next == "N"):
@@ -37,7 +38,7 @@ def main():
     else:
         exit()
 
-print("\n-------- Welcome to Amenhotep (III) Supermarket! 🤩--------\n")
+print("\n-------- Welcome to Zn Inc Supermarket! 🤩--------\n")
 main()
 
 

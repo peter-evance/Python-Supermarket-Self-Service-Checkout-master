@@ -1,4 +1,4 @@
-class CheckoutRegister():
+class Checkout():
     """Extends the queries and functionalities of products by use of helper functions"""
     def __init__(self,checkout_date,checkout_items):
         self.checkout_date = checkout_date
@@ -45,7 +45,7 @@ class CheckoutRegister():
                     continue
                 else:
                     customer_pay += paid
-                    self.customer_pay = customer_pay
+                    self.customer_pay = round(customer_pay,2)
                     if(paid < total):
                         due = total - paid
                         total = due
@@ -74,7 +74,7 @@ class CheckoutRegister():
         print("-----------------------------------------")
         print("Total amount due:",'     $'+str(self.due))
         print("Amount Received",'       $'+str(self.customer_pay))
-        print("Change Given",'          $'+str(self.change),'\n')
+        print("Change Given",'          $'+str(self.change))
         
 
 
