@@ -2,4 +2,4 @@
 
 ## Functionality
 
-This program simulates a demo supermarket checkout system
+This program simulates a demo of a small shop checkout system

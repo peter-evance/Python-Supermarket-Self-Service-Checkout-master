@@ -8,13 +8,13 @@ class Checkout():
         """ Function : Aggregates the total payment that is required for the purchase
             Returns  : Calculated sum plus the tax region factored in."""
             
-        tax = str(input("\n Please enter tax area (V)irginia or (M)aryland ?: "))
+        tax = str(input("\n Please enter tax area (N)airobi or (K)isumu ?: "))
         cart_totals = 0
         for index, product in enumerate(self.checkout_items):
-            if tax == "v":
+            if tax.lower() == "n":
                 cart_totals += (product['price'])*1.06
-            elif tax == "m":
-                cart_totals += (product['price'])*1.046
+            elif tax.lower() == "k":
+                cart_totals += (product['price'])*1.05
             else:
                 cart_totals += product['price']         
         self.due = cart_totals

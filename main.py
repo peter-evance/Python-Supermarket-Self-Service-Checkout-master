@@ -29,7 +29,7 @@ def main():
     total_payment = c1.calculate_payment_due()
     change = c1.pay_money(total_payment)
     c1.print_receipt(change)
-    print("\nThank you for shopping at Zn Inc (III)!\n")
+    print("\nThank you for shopping at Peter Inc !\n")
 
     next = input("(N)ext customer, or (Q)uit? ")
     if(next == "n" or next == "N"):
@@ -38,7 +38,7 @@ def main():
     else:
         exit()
 
-print("\n-------- Welcome to Zn Inc Supermarket! 🤩--------\n")
+print("\n-------- Welcome to Peter Inc Supermarket! 🤩--------\n")
 main()
 
 

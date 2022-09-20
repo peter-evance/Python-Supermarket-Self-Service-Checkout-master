@@ -1,11 +1,5 @@
 product_list = [
             {
-                'name': 'Avocado',
-                'price': 80,
-                'description': 'Organic',
-                'bar_code': "1"                  
-                },
-            {
                 'name': 'Pen',
                 'price': 25,
                 'description': 'Organic',
@@ -22,72 +16,6 @@ product_list = [
                 'price': 25,
                 'description': 'Organic',
                 'bar_code': "4"                  
-                },
-            {
-                'name': 'File',
-                'price': 25,
-                'description': 'Organic',
-                'bar_code': "5"                  
-                },
-            {
-                'name': 'Banana',
-                'price': 25,
-                'description': 'Organic',
-                'bar_code': "6"                  
-                },
-            {
-                'name': 'Colgate',
-                'price': 25,
-                'description': 'Organic',
-                'bar_code': "7"                  
-                },
-            {
-                'name': 'Peach',
-                'price': 25,
-                'description': 'Organic',
-                'bar_code': "8"                  
-                },
-            {
-                'name': 'Lotion',
-                'price': 25,
-                'description': 'Organic',
-                'bar_code': "9"                  
-                },
-            {
-                'name': 'Wheat Flour',
-                'price': 25,
-                'description': 'Organic',
-                'bar_code': "10"                  
-                },
-            {
-                'name': 'Yoghurt',
-                'price': 25,
-                'description': 'Organic',
-                'bar_code': "11"                  
-                },
-            {
-                'name': 'Apple cider juice',
-                'price': 25,
-                'description': 'Organic',
-                'bar_code': "12"                  
-                },
-            {
-                'name': 'Vineager',
-                'price': 25,
-                'description': 'Organic',
-                'bar_code': "13"                  
-                },
-            {
-                'name': '1kg Meat',
-                'price': 25,
-                'description': 'Organic',
-                'bar_code': "14"                  
-                },
-            {
-                'name': 'Chicken',
-                'price': 25,
-                'description': 'Organic',
-                'bar_code': "15"                  
                 },
         ]   
 
